@@ -20,17 +20,32 @@ void main() {
 
   // Maps (objeto em relacao ao outro,  em outras linguagem chamada de dicionario)
 
-  Map<String, dynamic> registryPrices = {};
-  registryPrices["Sao Paulo"] = 1200;
-  registryPrices["Rio de Janeiro"] = 1500;
-  registryPrices["Salvador"] = 1250;
-  registryPrices["New York"] = "too expensive";
+  // Map<String, dynamic> registryPrices = {};
+  // registryPrices["Sao Paulo"] = 1200;
+  // registryPrices["Rio de Janeiro"] = 1500;
+  // registryPrices["Salvador"] = 1250;
+  // registryPrices["New York"] = "too expensive";
+  //
+  // registryPrices.remove("Sao Paulo");
+  //
+  // print(registryPrices);
+  //
 
-  registryPrices.remove("Sao Paulo");
+  // Dynamics
+  dynamic myNumber = 7.1;
+  print(myNumber.runtimeType);
+  myNumber = "Bruna";
+  print(myNumber.runtimeType);
 
-  print(registryPrices);
+  // Static
+  Travel todayTravel = Travel();
+  todayTravel.money;
+  Travel.workCode;
 
-  }
+
+
+
+}
 
 //Enums
 
@@ -88,6 +103,14 @@ void chooseTransportType(TransportType transport){
 Set<String> registryDestiny(String destiny, Set<String> database){
   database.add(destiny);
   return database;
+}
+
+// Static
+
+class Travel{
+  static String workCode = "workCode";
+  double money = 0;
+
 }
 
 
